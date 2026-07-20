@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
     <title>Portafolio de Alirio</title>
   </head>
   <body class="body">
@@ -40,13 +40,14 @@
 
       <section class="skills">
         <h2>Habilidades y herramientas</h2>
-        <div class="skills-grid">
-          <div class="skill-pill">HTML5</div>
-          <div class="skill-pill">CSS3</div>
-          <div class="skill-pill">JavaScript</div>
-          <div class="skill-pill">Ruby</div>
-          <div class="skill-pill">Framework</div>
-        </div>
+        <ul class="skills-grid">
+          <li><a href="#" class="skill-link"><img src="/images/HTML.svg" alt="HTML5"/></a></li>
+          <li><a href="#" class="skill-link"><img src="/images/CSS.svg" alt="CSS3"/></a></li>
+          <li><a href="#" class="skill-link"><img src="/images/JavaScript.svg" alt="JavaScript"/></a></li>
+          <li><a href="#" class="skill-link"><img src="/images/Git.svg" alt="Git"/></a></li>
+          <li><a href="#" class="skill-link"><img src="/images/GitHub.svg" alt="GitHub"/></a></li>
+          <li><a href="#" class="skill-link"><img src="/images/ChatGPT.svg" alt="ChatGPT"/></a></li>
+        </ul>
       </section>
 
       <section class="projects-cards">
@@ -54,41 +55,45 @@
 
         <div class="project-card">
           <img
-          src="/images/coffee-shop.png"
-          alt="Imagen de proyecto"
+          src="/images/WebCafeteria.jpg"
+          alt="Imagen de la WebCafeteria"
           class="coffeshop-image"/>
           <div class="project-tags">
-            <span>HTML</span>
-            <span>CSS</span>
+            <ul>
+              <li><a href="#" class="skill-link"><img src="/images/HTML.svg" alt="HTML5"/></a></li>
+              <li><a href="#" class="skill-link"><img src="/images/CSS.svg" alt="CSS3"/></a></li>
+            </ul>
           </div>
           <div class="card_content">
             <div class="card_info">
               <h3>Página web de una cafetería</h3>
               <p class="project-desc">
-                Desarrollo de una página web responsiva para una cafetería de especialidad, con énfasis en la experiencia
-                de usuario y diseño moderno.
+                Desarrollo de una landing page responsiva para una cafetería siguiendo un brief de diseño. Inclue estruxtura semántica, maquetación con Flebox, creación de secciones nuevas y un formulario de contacto funcional.
+                Logro: Implementé desde cero el diseño completo de la página, organicé el proyecto con buenas prácticas y publiqué la versión final utilizando GitHub Pages.
               </p>
             </div>
-            <a href="#" class="card_link">Demo en vivo</a>
-            <a href="#" class="card_link">Github</a>
+            <a href="#" class="card_link"><img src="/images/Demo.svg" alt="Demo"/>Demo en vivo</a>
+            <a href="#" class="card_link"><img src="/images/GitHub.svg" alt="GitHub"/>Github</a>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="/images/my-project.png" alt="Imagen de proyecto" class="coffeshop-image"/>
+          <img src="/images/Proyecto.jpg" alt="Imagen de proyecto" class="project-image"/>
           <div class="project-tags">
-            <span>JavaScript</span>
+            <ul>
+              <li><a href="#" class="skill-link"><img src="/images/JavaScript.svg" alt="JavaScript"/></a></li>
+              <li><a href="#" class="skill-link"><img src="/images/React.svg" alt="React"/></a></li>
+            </ul>
           </div>
           <div class="card_content">
             <div class="card_info">
-              <h3>Página web de una cafetería</h3>
+              <h3>Mi proyecto personal</h3>
               <p class="project-desc">
-                Desarrollo de una página web responsiva para una cafetería de especialidad, con énfasis en la experiencia
-                de usuario y diseño moderno.
+                Descripción del proyecto.
               </p>
             </div>
-            <a href="#" class="card_link">Demo en vivo</a>
-            <a href="#" class="card_link">Github</a>
+            <a href="#" class="card_link"><img src="/images/Demo.svg" alt="Demo"/>Demo en vivo</a>
+            <a href="#" class="card_link"><img src="/images/GitHub.svg" alt="GitHub"/>Github</a>
           </div>
         </div>
       </section>
@@ -100,11 +105,13 @@
             <h2>Contacto</h2>
             <p class="contact-email">romeroaj.20@gmail.com</p>
 
-            <p class="contact-label">Redes</p>
-            <div class="socials">
-              <a href="#" class="social-pill">Github</a>
-              <a href="#" class="social-pill">LinkedIn</a>
-              <a href="#" class="social-pill">Twitter</a>
+              <div class="socials">
+                <ul class="social-links">
+                    <li><a href="#" class="social-link"><img src="/images/LinkedIn.svg" alt="LinkedIn"/>LinkedIn</a></li>
+                    <li><a href="#" class="social-link"><img src="/images/Facebook.svg" alt="Facebook"/>Facebook</a></li>
+                    <li><a href="#" class="social-link"><img src="/images/Instagram.svg" alt="Instagram"/>Instagram</a></li>
+                    <li><a href="#" class="social-link"><img src="/images/Twitter.svg" alt="Twitter"/>Twitter</a></li>
+                </ul>
             </div>
         </section>
 
