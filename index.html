@@ -3,120 +3,187 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/normalize.css"/>
+    <link rel="stylesheet" href="styles/index.css"/>
     <title>Portafolio de Alirio</title>
   </head>
   <body class="body">
     <header class="header">
-      <div class="profile-image">
-        <div class="blur_circle"></div>
-            <img src="/images/ProfileImage.jpg" alt="Foto perfil de Alirio Romero" class="profile_image"/>
-      </div>
-
-      <h1 class="name">Alirio Romero</h1>
+      <h1 class="name">Alirio J Romero D</h1>
       <p class="role">
-            Desarrollador Full Stack Junior | Typescript, React, NodeJs
+        Desarrollador Full Stack Junior | Typescript, React, NodeJs
       </p>
       <p class="description">
-            Desarrollador web junior con experiencia práctica creando interfaces
-            limpias y responsivas con HTML, CSS, JavaScript y React, así como
-            implementando lógica básica de Backend. He trabajado en proyectos
-            formativos que siguen procesos reales de desarollo, usando Git, GitHub y
-            Figma. Disfruto colaborar en equipo, mantener un código claro y resolver
-            problemas de forma estructurada. Motivado por seguir aprendiendo, asumir
-            nuevos retos y aprovechar oportunidades para crecer como desarrollador.
+        Desarrollador web junior con experiencia práctica creando interfaces
+        limpias y responsivas con HTML, CSS, JavaScript y React, así como
+        implementando lógica básica de Backend. He trabajado en proyectos
+        formativos que siguen procesos reales de desarollo, usando Git, GitHub y
+        Figma. Disfruto colaborar en equipo, mantener un código claro y resolver
+        problemas de forma estructurada. Motivado por seguir aprendiendo, asumir
+        nuevos retos y aprovechar oportunidades para crecer como desarrollador.
       </p>
-      <div class="info">
-            <ul class="nav_links">
-                <li><a href="/downloads/CV-Alirio Romero.pdf" class="nav_link">Descargar CV</a></li>
-                <li><a href="https://github.com/repos?q=owner%3A%40me" class="nav_link">Enlace a GitHub</a></li>
-                <li><a href="mailto:romeroaj.20@gmail.com" class="nav_link">Hablemos</a></li>
-            </ul>
+      <nav class="port-nav">
+        <ul class="nav_links">
+          <li>
+            <a href="downloads/CV-Alirio Romero.pdf" class="nav_link-cv"
+              >Descargar CV</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/romeroaj20-ui" class="nav_link-github"
+              >Enlace a GitHub</a
+            >
+          </li>
+          <li>
+            <a href="mailto:romeroaj.20@gmail.com" class="nav_link-talk">Hablemos</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="profile-image">
+        <div class="blur_circle"></div>
+        <img
+          src="images/ProfileImage.jpg"
+          alt="Foto perfil de Alirio Romero"
+          class="profile_image"
+        />
       </div>
     </header>
 
     <main class="content">
-
       <section class="skills">
         <h2>Habilidades y herramientas</h2>
         <ul class="skills-grid">
-          <li><a href="#" class="skill-link"><img src="/images/HTML.svg" alt="HTML5"/></a></li>
-          <li><a href="#" class="skill-link"><img src="/images/CSS.svg" alt="CSS3"/></a></li>
-          <li><a href="#" class="skill-link"><img src="/images/JavaScript.svg" alt="JavaScript"/></a></li>
-          <li><a href="#" class="skill-link"><img src="/images/Git.svg" alt="Git"/></a></li>
-          <li><a href="#" class="skill-link"><img src="/images/GitHub.svg" alt="GitHub"/></a></li>
-          <li><a href="#" class="skill-link"><img src="/images/ChatGPT.svg" alt="ChatGPT"/></a></li>
+          <li>
+            <img src="images/HTML.svg" alt="HTML5"
+            />
+          </li>
+          <li>
+            <img src="images/CSS.svg" alt="CSS3"/>
+          </li>
+          <li>
+            <img src="images/JavaScript.svg" alt="JavaScript"/>
+          </li>
+          <li>
+          <img src="images/Git.svg" alt="Git"/>
+          </li>
+          <li>
+              <img src="images/GitHub.svg" alt="GitHub"/>
+          </li>
+          <li>
+              <img src="images/ChatGPT.svg" alt="ChatGPT"
+            />
+          </li>
         </ul>
       </section>
 
-      <section class="projects-cards">
+      <section class="projects">
         <h2>Proyectos destacados</h2>
+        <div class="projects-grid">
+          <article class="project-card">
 
-        <div class="project-card">
-          <img
-          src="/images/WebCafeteria.jpg"
-          alt="Imagen de la WebCafeteria"
-          class="coffeshop-image"/>
-          <div class="project-tags">
-            <ul>
-              <li><a href="#" class="skill-link"><img src="/images/HTML.svg" alt="HTML5"/></a></li>
-              <li><a href="#" class="skill-link"><img src="/images/CSS.svg" alt="CSS3"/></a></li>
-            </ul>
-          </div>
+              <div class="project-tags">
+                <img
+                src="images/WebCafeteria.jpg"
+                alt="Imagen de la WebCafeteria"
+                class="coffeshop-image"
+              />
+                <ul>
+                  <li>
+                    <img src="images/HTML.svg" alt="HTML5"/>
+                  </li>
+                  <li>
+                    <img src="images/CSS.svg" alt="CSS3"/>
+                  </li>
+                </ul>
+              </div>
           <div class="card_content">
             <div class="card_info">
               <h3>Página web de una cafetería</h3>
               <p class="project-desc">
-                Desarrollo de una landing page responsiva para una cafetería siguiendo un brief de diseño. Inclue estruxtura semántica, maquetación con Flebox, creación de secciones nuevas y un formulario de contacto funcional.
-                Logro: Implementé desde cero el diseño completo de la página, organicé el proyecto con buenas prácticas y publiqué la versión final utilizando GitHub Pages.
+                Desarrollo de una landing page responsiva para una cafetería
+                siguiendo un brief de diseño. Inclue estruxtura semántica,
+                maquetación con Flebox, creación de secciones nuevas y un
+                formulario de contacto funcional. Logro: Implementé desde cero
+                el diseño completo de la página, organicé el proyecto con buenas
+                prácticas y publiqué la versión final utilizando GitHub Pages.
               </p>
             </div>
-            <a href="#" class="card_link"><img src="/images/Demo.svg" alt="Demo"/>Demo en vivo</a>
-            <a href="#" class="card_link"><img src="/images/GitHub.svg" alt="GitHub"/>Github</a>
-          </div>
-        </div>
+            <a href="#" class="card_link"
+              ><img src="images/Demo.svg" alt="Demo" />Demo en vivo</a
+            >
+            <a href="#" class="card_link"
+              ><img src="images/GitHub.svg" alt="GitHub" />Github</a
+            >
+          </article>
 
-        <div class="project-card">
-          <img src="/images/Proyecto.jpg" alt="Imagen de proyecto" class="project-image"/>
-          <div class="project-tags">
-            <ul>
-              <li><a href="#" class="skill-link"><img src="/images/JavaScript.svg" alt="JavaScript"/></a></li>
-              <li><a href="#" class="skill-link"><img src="/images/React.svg" alt="React"/></a></li>
-            </ul>
-          </div>
-          <div class="card_content">
+          <article class="project-card">
+
+            <div class="project-tags">
+              <img
+              src="images/Proyecto.jpg"
+              alt="Imagen de proyecto"
+              class="project-image"
+              />
+              <ul>
+                <li>
+                  <img src="images/JavaScript.svg" alt="JavaScript"
+                  />
+                </li>
+                <li>
+                <img src="images/React.svg" alt="React"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div class="card_content">
             <div class="card_info">
               <h3>Mi proyecto personal</h3>
-              <p class="project-desc">
-                Descripción del proyecto.
-              </p>
+              <p class="project-desc">Descripción del proyecto.</p>
             </div>
-            <a href="#" class="card_link"><img src="/images/Demo.svg" alt="Demo"/>Demo en vivo</a>
-            <a href="#" class="card_link"><img src="/images/GitHub.svg" alt="GitHub"/>Github</a>
-          </div>
+             <a href="#" class="card_link"
+              ><img src="images/Demo.svg" alt="Demo" />Demo en vivo</a
+              >
+              <a href="#" class="card_link"
+              ><img src="images/GitHub.svg" alt="GitHub" />Github</a
+              >
+            </div>
+          </article>
         </div>
       </section>
     </main>
 
-      <footer class="footer">
+    <footer class="footer">
+      <div class="footer-circle"></div>
+      <section class="contact">
+        <h2 class="footer_title">Contacto</h2>
+        <p class="contact-email">romeroaj.20@gmail.com</p>
 
-        <section class="contact">
-            <h2>Contacto</h2>
-            <p class="contact-email">romeroaj.20@gmail.com</p>
-
-              <div class="socials">
-                <ul class="social-links">
-                    <li><a href="#" class="social-link"><img src="/images/LinkedIn.svg" alt="LinkedIn"/>LinkedIn</a></li>
-                    <li><a href="#" class="social-link"><img src="/images/Facebook.svg" alt="Facebook"/>Facebook</a></li>
-                    <li><a href="#" class="social-link"><img src="/images/Instagram.svg" alt="Instagram"/>Instagram</a></li>
-                    <li><a href="#" class="social-link"><img src="/images/Twitter.svg" alt="Twitter"/>Twitter</a></li>
-                </ul>
-            </div>
-        </section>
-
-      </footer>
-
-    </section>
+        <div class="socials">
+          <ul class="social-links">
+            <li>
+              <a href="#" class="social-link"
+                ><img src="images/LinkedIn.svg" alt="LinkedIn" /></a
+              >
+            </li>
+            <li>
+              <a href="#" class="social-link"
+                ><img src="images/Facebook.svg" alt="Facebook" /></a
+              >
+            </li>
+            <li>
+              <a href="#" class="social-link"
+                ><img src="images/Instagram.svg" alt="Instagram" /></a
+              >
+            </li>
+            <li>
+              <a href="#" class="social-link"
+                ><img src="images/Twitter.svg" alt="Twitter" /></a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>

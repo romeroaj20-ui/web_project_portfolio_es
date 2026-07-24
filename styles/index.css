@@ -1,0 +1,222 @@
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("fonts/OpenSans-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Archivo Black";
+  src:
+    url("fonts/ArchivoBlack-Regular.woff") format("woff"),
+    url("fonts/ArchivoBlack-Regular.woff2") format("woff2");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #111;
+  color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /*padding: 32px;*/
+}
+
+.header {
+  display: grid;
+  grid-template-areas:
+    "name profile-image"
+    "role profile-image"
+    "description profile-image"
+    "port-nav profile-image";
+  align-items: center;
+  grid-template-columns: 1fr 300px;
+}
+
+.name {
+  grid-area: name;
+  font-family: "Archivo Black";
+  font-size: 72px;
+  line-height: 1;
+  width: 793px;
+  height: 156px;
+}
+
+.role {
+  grid-area: role;
+  max-width: 790px;
+  max-height: 25px;
+  font-size: 18px;
+  color: rgba(147, 146, 146, 0.489);
+}
+
+.description {
+  grid-area: description;
+  max-width: 793px;
+  max-height: 150px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.port-nav {
+  grid-area: port-nav;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.nav_links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav_link-cv {
+  font-weight: bold;
+  max-width: 115px;
+  max-height: 25px;
+}
+
+.nav_link-github {
+  font-weight: bold;
+  max-width: 138px;
+  max-height: 25px;
+}
+
+.nav_link-talk {
+  font-weight: bold;
+  max-width: 88px;
+  max-height: 25px;
+}
+
+.profile-image {
+  grid-area: profile-image;
+  width: 387px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blur_circle {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(90, 71, 255, 0.65) 0%,
+    rgba(90, 71, 255, 0.3) 35%,
+    rgba(90, 71, 255, 0.12) 55%,
+    transparent 80%
+  );
+  filter: blur(70px);
+  z-index: 0;
+}
+
+.profile_image {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+  border-radius: 2px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px;
+}
+
+.footer-blur {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(90, 71, 255, 0.55) 0%,
+    rgba(90, 71, 255, 0.25) 40%,
+    transparent 75%
+  );
+  filter: blur(90px);
+  z-index: 0;
+}
+
+.contact {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.footer_title {
+  color: white;
+  font-family: "Archivo Black";
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.contact-email {
+  color: #6c63ff;
+  font-size: 18px;
+  max-width: 194px;
+  max-height: 25px;
+  margin-bottom: 30px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  width: 24px;
+  height: 24px;
+}
+
+.social-link:hover {
+  opacity: 0.5;
+}
+
+.contact-email:hover {
+  opacity: 0.5;
+}
