@@ -22,7 +22,7 @@
   background-color: #111;
   color: #fff;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 0;
   border-radius: 24px;
   box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
   display: flex;
@@ -77,27 +77,46 @@
 
 .nav_links {
   display: flex;
-  gap: 30px;
+  gap: 35px;
   list-style: none;
   text-decoration: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav_link-cv {
+  text-decoration: none;
+  color: #ffffff;
   font-weight: bold;
   max-width: 115px;
   max-height: 25px;
+  border-bottom: 3px solid #7c5cff;
+  padding-bottom: 6px;
 }
 
 .nav_link-github {
+  text-decoration: none;
+  color: #ffffff;
   font-weight: bold;
   max-width: 138px;
   max-height: 25px;
+  border-bottom: 3px solid #7c5cff;
+  padding-bottom: 6px;
 }
 
 .nav_link-talk {
+  text-decoration: none;
+  color: #ffffff;
   font-weight: bold;
   max-width: 88px;
   max-height: 25px;
+  border-bottom: 3px solid #7c5cff;
+  padding-bottom: 6px;
+}
+
+.nav_links a:hover {
+  opacity: 0.5;
 }
 
 .profile-image {
@@ -133,12 +152,81 @@
   border-radius: 2px;
 }
 
+.skills-title {
+  font-family: "Archivo Black";
+  font-size: 40px;
+  padding: 80px 120px 50px 0;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-  gap: 40px;
+  gap: 180px;
   list-style: none;
-  padding: 0;
+  padding-bottom: 100px;
+}
+
+.projects_title {
+  font-size: 40px;
+  font-family: "Archivo Black";
+}
+
+.projects-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1c1c;
+  width: calc((100% - 20px) / 2);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #1d1d1d;
+  /*column-gap: 20px;*/
+}
+
+.card_image {
+  width: 100%;
+  aspect-ratio: 3/2;
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.card_image_coffe {
+  background-image: url(/images/WebCafeteria.jpg);
+
+  background-position: center;
+  background-size: cover;
+}
+
+.card_image_project {
+  background-image: url(/images/Proyecto.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card_image-container {
+  position: absolute;
+  width: 100%;
+}
+
+.card-skills {
+  position: absolute;
+  left: 10px;
+  bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  list-style: none;
+}
+
+.card-title {
+  font-size: 24px;
 }
 
 .projects-grid {
@@ -155,13 +243,11 @@
   padding: 120px 20px;
 }
 
-.footer-blur {
+.footer-circle {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 650px;
-  height: 650px;
+
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -184,15 +270,15 @@
   font-family: "Archivo Black";
   font-size: 40px;
   font-weight: normal;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .contact-email {
   color: #6c63ff;
   font-size: 18px;
-  max-width: 194px;
+  max-width: 100%;
   max-height: 25px;
-  margin-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .social-links {

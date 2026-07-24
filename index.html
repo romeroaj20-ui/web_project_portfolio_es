@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/normalize.css"/>
-    <link rel="stylesheet" href="styles/index.css"/>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/index.css" />
     <title>Portafolio de Alirio</title>
   </head>
   <body class="body">
@@ -35,7 +35,9 @@
             >
           </li>
           <li>
-            <a href="mailto:romeroaj.20@gmail.com" class="nav_link-talk">Hablemos</a>
+            <a href="mailto:romeroaj.20@gmail.com" class="nav_link-talk"
+              >Hablemos</a
+            >
           </li>
         </ul>
       </nav>
@@ -52,100 +54,81 @@
 
     <main class="content">
       <section class="skills">
-        <h2>Habilidades y herramientas</h2>
+        <h2 class="skills-title">Habilidades y herramientas</h2>
         <ul class="skills-grid">
           <li>
-            <img src="images/HTML.svg" alt="HTML5"
-            />
+            <img src="images/HTML.svg" alt="HTML5" />
           </li>
           <li>
-            <img src="images/CSS.svg" alt="CSS3"/>
+            <img src="images/CSS.svg" alt="CSS3" />
           </li>
           <li>
-            <img src="images/JavaScript.svg" alt="JavaScript"/>
+            <img src="images/JavaScript.svg" alt="JavaScript" />
           </li>
           <li>
-          <img src="images/Git.svg" alt="Git"/>
+            <img src="images/Git.svg" alt="Git" />
           </li>
           <li>
-              <img src="images/GitHub.svg" alt="GitHub"/>
+            <img src="images/GitHub.svg" alt="GitHub" />
           </li>
           <li>
-              <img src="images/ChatGPT.svg" alt="ChatGPT"
-            />
+            <img src="images/ChatGPT.svg" alt="ChatGPT" />
           </li>
         </ul>
       </section>
 
       <section class="projects">
-        <h2>Proyectos destacados</h2>
-        <div class="projects-grid">
+        <h2 class="projects_title">Proyectos destacados</h2>
+        <div class="projects-cards">
           <article class="project-card">
-
-              <div class="project-tags">
-                <img
-                src="images/WebCafeteria.jpg"
-                alt="Imagen de la WebCafeteria"
-                class="coffeshop-image"
-              />
-                <ul>
-                  <li>
-                    <img src="images/HTML.svg" alt="HTML5"/>
-                  </li>
-                  <li>
-                    <img src="images/CSS.svg" alt="CSS3"/>
-                  </li>
-                </ul>
+            <div class="card_image card_image_coffe">
+              <div class="card_image-container"></div>
+              <div class="card-skills">
+                <img src="images/HTML.svg" alt="HTML5" />
+                <img src="images/CSS.svg" alt="CSS3" />
               </div>
-          <div class="card_content">
-            <div class="card_info">
-              <h3>Página web de una cafetería</h3>
-              <p class="project-desc">
-                Desarrollo de una landing page responsiva para una cafetería
-                siguiendo un brief de diseño. Inclue estruxtura semántica,
-                maquetación con Flebox, creación de secciones nuevas y un
-                formulario de contacto funcional. Logro: Implementé desde cero
-                el diseño completo de la página, organicé el proyecto con buenas
-                prácticas y publiqué la versión final utilizando GitHub Pages.
-              </p>
             </div>
-            <a href="#" class="card_link"
-              ><img src="images/Demo.svg" alt="Demo" />Demo en vivo</a
-            >
-            <a href="#" class="card_link"
-              ><img src="images/GitHub.svg" alt="GitHub" />Github</a
-            >
+            <div class="card_content">
+              <div class="card_info">
+                <h3 class="card_title">Página web de una cafetería</h3>
+                <p class="project-desc">
+                  Desarrollo de una landing page responsiva para una cafetería
+                  siguiendo un brief de diseño. Inclue estruxtura semántica,
+                  maquetación con Flebox, creación de secciones nuevas y un
+                  formulario de contacto funcional. Logro: Implementé desde cero
+                  el diseño completo de la página, organicé el proyecto con
+                  buenas prácticas y publiqué la versión final utilizando GitHub
+                  Pages.
+                </p>
+              </div>
+              <a href="#" class="card_link"
+                ><img src="images/Demo.svg" alt="Demo" />Demo en vivo</a
+              >
+              <a href="#" class="card_link"
+                ><img src="images/GitHub.svg" alt="GitHub" />Github</a
+              >
+            </div>
           </article>
 
           <article class="project-card">
+            <div class="card_image card_image_project">
+              <div class="card_image-container"></div>
+              <div class="card-skills">
+                <img src="images/JavaScript.svg" alt="JavaScript" />
+                <img src="images/React.svg" alt="React" />
+              </div>
+            </div>
 
-            <div class="project-tags">
-              <img
-              src="images/Proyecto.jpg"
-              alt="Imagen de proyecto"
-              class="project-image"
-              />
-              <ul>
-                <li>
-                  <img src="images/JavaScript.svg" alt="JavaScript"
-                  />
-                </li>
-                <li>
-                <img src="images/React.svg" alt="React"
-                  />
-                </li>
-              </ul>
-            </div>
             <div class="card_content">
-            <div class="card_info">
-              <h3>Mi proyecto personal</h3>
-              <p class="project-desc">Descripción del proyecto.</p>
-            </div>
-             <a href="#" class="card_link"
-              ><img src="images/Demo.svg" alt="Demo" />Demo en vivo</a
+              <div class="card_info">
+                <h3 class="card_title">Mi proyecto personal</h3>
+                <p class="project-desc">Descripción del proyecto.</p>
+              </div>
+              <a href="#" class="card_link"
+                ><img src="images/Demo.svg" alt="Demo" />Demo en vivo</a
               >
               <a href="#" class="card_link"
-              ><img src="images/GitHub.svg" alt="GitHub" />Github</a
+                ><img src="images/GitHub.svg" alt="GitHub" />Github</a
               >
             </div>
           </article>
@@ -163,23 +146,23 @@
           <ul class="social-links">
             <li>
               <a href="#" class="social-link"
-                ><img src="images/LinkedIn.svg" alt="LinkedIn" /></a
-              >
+                ><img src="images/LinkedIn.svg" alt="LinkedIn"
+              /></a>
             </li>
             <li>
               <a href="#" class="social-link"
-                ><img src="images/Facebook.svg" alt="Facebook" /></a
-              >
+                ><img src="images/Facebook.svg" alt="Facebook"
+              /></a>
             </li>
             <li>
               <a href="#" class="social-link"
-                ><img src="images/Instagram.svg" alt="Instagram" /></a
-              >
+                ><img src="images/Instagram.svg" alt="Instagram"
+              /></a>
             </li>
             <li>
               <a href="#" class="social-link"
-                ><img src="images/Twitter.svg" alt="Twitter" /></a
-              >
+                ><img src="images/Twitter.svg" alt="Twitter"
+              /></a>
             </li>
           </ul>
         </div>
