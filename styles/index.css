@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Open Sans";
   src:
-    url("fonts/OpenSans-Regular.woff2") format("woff2"),
-    url("fonts/OpenSans-Regular.woff") format("woff");
+    url("/fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("/fonts/OpenSans-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "Archivo Black";
   src:
-    url("fonts/ArchivoBlack-Regular.woff") format("woff"),
-    url("fonts/ArchivoBlack-Regular.woff2") format("woff2");
+    url("/fonts/ArchivoBlack-Regular.woff") format("woff"),
+    url("/fonts/ArchivoBlack-Regular.woff2") format("woff2");
 }
 
 * {
@@ -18,20 +18,23 @@
 }
 
 .body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open sans", sans-serif;
   background-color: #111;
   color: #fff;
-  max-width: 1440px;
   margin: 0;
   border-radius: 24px;
   box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
-  /*padding: 32px;*/
+  padding: 1rem;
 }
 
 .header {
+  width: 100%;
+  max-width: 1440px;
   display: grid;
   grid-template-areas:
     "name profile-image"
@@ -39,32 +42,33 @@
     "description profile-image"
     "port-nav profile-image";
   align-items: center;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 400px;
+  padding-left: 120px;
 }
 
 .name {
   grid-area: name;
   font-family: "Archivo Black";
-  font-size: 72px;
+  font-size: 4rem;
   line-height: 1;
-  width: 793px;
-  height: 156px;
+  font-weight: 800;
+  max-width: 460px;
 }
 
 .role {
   grid-area: role;
-  max-width: 790px;
-  max-height: 25px;
+  max-width: 100%;
+  font-weight: 400;
   font-size: 18px;
   color: rgba(147, 146, 146, 0.489);
 }
 
 .description {
   grid-area: description;
-  max-width: 793px;
-  max-height: 150px;
+  max-width: 700px;
+  max-height: 180px;
   font-size: 18px;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 .port-nav {
@@ -73,6 +77,7 @@
   display: flex;
   flex-direction: column;
   color: #fff;
+  margin-top: 1rem;
 }
 
 .nav_links {
@@ -85,32 +90,10 @@
   padding: 0;
 }
 
-.nav_link-cv {
+.nav_links a {
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
-  max-width: 115px;
-  max-height: 25px;
-  border-bottom: 3px solid #7c5cff;
-  padding-bottom: 6px;
-}
-
-.nav_link-github {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
-  max-width: 138px;
-  max-height: 25px;
-  border-bottom: 3px solid #7c5cff;
-  padding-bottom: 6px;
-}
-
-.nav_link-talk {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
-  max-width: 88px;
-  max-height: 25px;
   border-bottom: 3px solid #7c5cff;
   padding-bottom: 6px;
 }
@@ -121,18 +104,20 @@
 
 .profile-image {
   grid-area: profile-image;
-  width: 387px;
-  height: 500px;
+  width: 100%;
+  max-height: 500px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 40px;
+  padding-right: 120px;
 }
 
 .blur_circle {
   position: absolute;
-  width: 520px;
-  height: 520px;
+  width: 440px;
+  height: 440px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -152,6 +137,10 @@
   border-radius: 2px;
 }
 
+.skills {
+  padding: 0 120px;
+}
+
 .skills-title {
   font-family: "Archivo Black";
   font-size: 40px;
@@ -169,28 +158,30 @@
 .projects_title {
   font-size: 40px;
   font-family: "Archivo Black";
+  padding-bottom: 5%;
+  padding-left: 120px;
 }
 
 .projects-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
   background-color: #1c1c1c;
-  width: calc((100% - 20px) / 2);
+  width: calc((100% - 260px) / 2);
   border-radius: 4px;
   overflow: hidden;
   border: 1px solid #1d1d1d;
-  /*column-gap: 20px;*/
 }
 
 .card_image {
   width: 100%;
-  aspect-ratio: 3/2;
+  aspect-ratio: 16/9;
   position: relative;
   padding-bottom: 56.25%;
   overflow: hidden;
@@ -198,14 +189,12 @@
 
 .card_image_coffe {
   background-image: url(/images/WebCafeteria.jpg);
-
   background-position: center;
   background-size: cover;
 }
 
 .card_image_project {
   background-image: url(/images/Proyecto.jpg);
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -233,6 +222,25 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
+}
+
+.card_links {
+  gap: 10px;
+  padding-top: 30px;
+}
+
+.card_link {
+  max-width: 132px;
+  max-height: 22px;
+  font-size: 16px;
+  list-style: none;
+}
+
+.card_link-github {
+  max-height: 20px;
+  max-width: 20px;
+  font-size: 16px;
+  list-style: none;
 }
 
 .footer {
@@ -267,9 +275,9 @@
 
 .footer_title {
   color: white;
-  font-family: "Archivo Black";
+  font-family: "Archivo Black", "regular";
   font-size: 40px;
-  font-weight: normal;
+  font-weight: 400;
   padding-bottom: 20px;
 }
 
@@ -295,8 +303,8 @@
   justify-content: center;
   align-items: center;
   transition: 0.3s;
-  width: 24px;
-  height: 24px;
+  max-width: 24px;
+  max-height: 24px;
 }
 
 .social-link:hover {
@@ -305,4 +313,96 @@
 
 .contact-email:hover {
   opacity: 0.5;
+}
+
+@media screen and (max-width: 1023px) {
+  /*.description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .skills-grid {
+    display: flex;
+    width: calc(100% / 6);
+  }
+
+  .footer {
+    max-width: calc(100%);
+    display: flex;
+    justify-content: center;
+  }*/
+  .header {
+    padding: 3rem 2.5rem;
+    grid-template-columns: 1fr 300px;
+    column-gap: 2.5rem;
+    row-gap: 1rem;
+  }
+
+  .name {
+    font-size: 3.2rem;
+  }
+
+  .role {
+    font-size: 1rem;
+    max-width: 320px;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .nav_links {
+    gap: 1.5rem;
+  }
+
+  .nav_links a {
+    font-size: 1rem;
+  }
+
+  .profile-image {
+    max-height: 400px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card_content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .profile-image {
+    width: 100%;
+  }
+
+  .skills-title {
+    max-width: 100%;
+  }
+
+  .skills-grid {
+    display: flex;
+    width: calc(100% / 6);
+  }
+
+  .footer {
+  }
+
+  .port-nav {
+    display: flex;
+  }
 }
