@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Open Sans";
   src:
-    url("/fonts/OpenSans-Bold.woff2") format("woff2"),
-    url("/fonts/OpenSans-Bold.woff") format("woff");
+    url("fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("fonts/OpenSans-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "Archivo Black";
   src:
-    url("/fonts/ArchivoBlack-Regular.woff") format("woff"),
-    url("/fonts/ArchivoBlack-Regular.woff2") format("woff2");
+    url("fonts/ArchivoBlack-Regular.woff") format("woff"),
+    url("fonts/ArchivoBlack-Regular.woff2") format("woff2");
 }
 
 * {
@@ -22,8 +22,6 @@
   background-color: #111;
   color: #fff;
   margin: 0;
-  border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -188,7 +186,7 @@
 }
 
 .card_image_coffe {
-  background-image: url(/images/WebCafeteria.jpg);
+  background-image: url(images/WebCafeteria.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -202,6 +200,8 @@
 .card_image-container {
   position: absolute;
   width: 100%;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 60%);
 }
 
 .card-skills {
@@ -214,14 +214,12 @@
   list-style: none;
 }
 
-.card-title {
+.card_title {
   font-size: 24px;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+.card_content {
+  padding: 20px;
 }
 
 .card_links {
@@ -241,6 +239,11 @@
   max-width: 20px;
   font-size: 16px;
   list-style: none;
+}
+
+.card_link:hover,
+.card_link-github:hover {
+  opacity: 0.5;
 }
 
 .footer {
@@ -316,27 +319,6 @@
 }
 
 @media screen and (max-width: 1023px) {
-  /*.description {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .project-card {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .skills-grid {
-    display: flex;
-    width: calc(100% / 6);
-  }
-
-  .footer {
-    max-width: calc(100%);
-    display: flex;
-    justify-content: center;
-  }*/
   .header {
     padding: 3rem 2.5rem;
     grid-template-columns: 1fr 300px;
@@ -356,6 +338,9 @@
   .description {
     font-size: 0.95rem;
     line-height: 1.55;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .nav_links {
@@ -369,6 +354,33 @@
   .profile-image {
     max-height: 400px;
     width: 100%;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: row;
+    width: calc((100% - 20px) / 2);
+  }
+
+  .skills-grid {
+    display: flex;
+    width: calc(100% / 6);
+    gap: 2rem;
+  }
+
+  .footer {
+    max-width: calc(100%);
+    display: flex;
+    justify-content: center;
+    padding: 4rem 1.25rem;
+  }
+
+  .skills {
+    padding: 0 2.5rem;
+  }
+
+  .projects_title {
+    padding-left: 2.5rem;
   }
 }
 
@@ -428,5 +440,54 @@
 
   .nav_links li {
     width: 100%;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .skills {
+    padding: 30px;
+    max-width: 320px;
+  }
+
+  .skills-title {
+    font-size: 1.75rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+    line-height: 1.1;
+  }
+
+  .skills-grid {
+    padding: 0;
+    margin: 0;
+    grid-template-columns: repeat(4, auto);
+    gap: 30px 25px;
+    justify-content: start;
+  }
+
+  .skills-grid img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+  }
+
+  .projects_title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    line-height: 1.15;
+    margin-top: 0;
+    margin-bottom: 25px;
+    max-width: 100px;
+  }
+
+  .projects-cards {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .project-card {
+    flex-direction: column;
+    overflow: hidden;
   }
 }
