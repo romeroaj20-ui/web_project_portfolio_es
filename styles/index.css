@@ -192,7 +192,7 @@
 }
 
 .card_image_project {
-  background-image: url(/images/Proyecto.jpg);
+  background-image: url(images/Proyecto.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -388,14 +388,18 @@
   .header {
     padding: 2rem 1.25rem;
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
-
+    grid-template-areas:
+      "profile-image"
+      "name"
+      "role"
+      "description"
+      "port-nav";
     row-gap: 1.25rem;
     justify-items: center;
   }
 
   .profile-image {
-    grid-area: image;
+    grid-area: profile-image;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -489,5 +493,15 @@
   .project-card {
     flex-direction: column;
     overflow: hidden;
+  }
+
+  .blur_circle {
+    width: 260px;
+    height: 260px;
+  }
+
+  .footer-circle {
+    width: 320px;
+    height: 320px;
   }
 }
