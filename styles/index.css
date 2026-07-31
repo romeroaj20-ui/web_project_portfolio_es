@@ -64,7 +64,6 @@
 .description {
   grid-area: description;
   max-width: 700px;
-  max-height: 180px;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -186,13 +185,13 @@
 }
 
 .card_image_coffe {
-  background-image: url(images/WebCafeteria.jpg);
+  background-image: url("images/WebCafeteria.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .card_image_project {
-  background-image: url(images/Proyecto.jpg);
+  background-image: url("images/Proyecto.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -358,7 +357,7 @@
 
   .project-card {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: calc((100% - 20px) / 2);
   }
 
@@ -463,9 +462,10 @@
   }
 
   .skills-grid {
+    width: 100%;
+    flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    grid-template-columns: repeat(4, auto);
     gap: 30px 25px;
     justify-content: start;
   }
@@ -503,5 +503,9 @@
   .footer-circle {
     width: 320px;
     height: 320px;
+  }
+
+  .social-links {
+    gap: 40px;
   }
 }
